@@ -49,6 +49,7 @@ window.addEventListener('scroll', () => {
     header.classList.toggle('shadow', window.scrollY > 0);
 });
 
+
 // swiper
 var swiper = new Swiper(".new-arrival", {
     spaceBetween: 20,
