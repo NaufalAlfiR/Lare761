@@ -19,11 +19,15 @@ document.querySelector("#cart-icon").onclick = () => {
 let user = document.querySelector(".user");
 
 document.querySelector("#user-icon").onclick = () => {
-  user.classList.toggle("active");
-  search.classList.remove("active");
-  cart.classList.remove("active");
-  navbar.classList.remove("active");
+  window.location.href = "login.html";
 };
+
+// document.querySelector("#user-icon").onclick = () => {
+//   user.classList.toggle("active");
+//   search.classList.remove("active");
+//   cart.classList.remove("active");
+//   navbar.classList.remove("active");
+// };
 
 let navbar = document.querySelector(".navbar");
 
@@ -34,12 +38,12 @@ document.querySelector("#menu-icon").onclick = () => {
   user.classList.remove("active");
 };
 
-window.onscroll = () => {
-  search.classList.remove("active");
-  cart.classList.remove("active");
-  user.classList.remove("active");
-  navbar.classList.remove("active");
-};
+// window.onscroll = () => {
+//   search.classList.remove("active");
+//   cart.classList.remove("active");
+//   user.classList.remove("active");
+//   navbar.classList.remove("active");
+// };
 
 // close menu (search, cart, user, navbar)
 document.addEventListener("click", (e) => {
