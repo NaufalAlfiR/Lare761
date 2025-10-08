@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login & Register - Kantin Lare761</title>
+    <link rel="stylesheet" href="css/login.css" />
+
+    <!-- Box Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <i class="bx bxs-store"></i>
+        <h1>Lare761</h1>
+      </div>
+
+      <div class="form-container">
+        <div class="tabs">
+          <button class="tab-btn active" onclick="switchTab('login')">
+            Masuk
+          </button>
+          <button class="tab-btn" onclick="switchTab('register')">
+            Daftar
+          </button>
+        </div>
+
+        <!-- Form Login -->
+        <div id="login" class="form-content active">
+          <form onsubmit="handleLogin(event)">
+            <div class="input-group">
+              <label for="login-email">Email</label>
+              <input
+                type="email"
+                id="login-email"
+                placeholder="nama@email.com"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="login-password">Kata Sandi</label>
+              <input
+                type="password"
+                id="login-password"
+                placeholder="Masukkan kata sandi"
+                required
+              />
+            </div>
+
+            <div class="forgot-password">
+              <a
+                href="#"
+                onclick="alert('Fitur lupa password akan segera hadir!'); return false;"
+                >Lupa Kata Sandi?</a
+              >
+            </div>
+
+            <button type="submit" class="submit-btn">Masuk</button>
+
+            <div class="divider">atau masuk dengan</div>
+
+            <div class="social-login">
+              <button
+                type="button"
+                class="social-btn"
+                onclick="alert('Login Google akan segera tersedia!')"
+              >
+                Google
+              </button>
+              <button
+                type="button"
+                class="social-btn"
+                onclick="alert('Login Facebook akan segera tersedia!')"
+              >
+                Facebook
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Form Register -->
+        <div id="register" class="form-content">
+          <form onsubmit="handleRegister(event)">
+            <div class="input-group">
+              <label for="register-name">Nama Lengkap</label>
+              <input
+                type="text"
+                id="register-name"
+                placeholder="Masukkan nama lengkap"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="register-email">Email</label>
+              <input
+                type="email"
+                id="register-email"
+                placeholder="nama@email.com"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="register-phone">Nomor Telepon</label>
+              <input
+                type="tel"
+                id="register-phone"
+                placeholder="08123456789"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="register-password">Kata Sandi</label>
+              <input
+                type="password"
+                id="register-password"
+                placeholder="Minimal 6 karakter"
+                required
+                minlength="6"
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="register-confirm-password"
+                >Konfirmasi Kata Sandi</label
+              >
+              <input
+                type="password"
+                id="register-confirm-password"
+                placeholder="Ulangi kata sandi"
+                required
+              />
+            </div>
+
+            <div class="checkbox-group">
+              <input type="checkbox" id="terms" required />
+              <label for="terms">Saya setuju dengan syarat dan ketentuan</label>
+            </div>
+
+            <button type="submit" class="submit-btn">Daftar Sekarang</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/login.js"></script>
+  </body>
+</html>
